@@ -6,10 +6,24 @@
   "automerge": false,
   "packageRules": [
     {
+      "groupName": "Target gems",
       "managers": ["bundler"],
       "matchDepTypes": ["direct"],
       "allowedVersions": "/^\\d+\\.\\d+\\.\\d+$/",
       "enabled": true
+    },
+    {
+      "managers": ["bundler"],
+      "matchDepTypes": ["direct"],
+      "matchPackagePatterns": [
+        "^rails",
+        "^active",
+        "^ahoy_email$",
+        "^sentry-rails$",
+        "^geocoder$",
+        "^capistrano-sidekiq$"
+      ],
+      "enabled": false
     },
     {
       "managers": ["bundler"],
