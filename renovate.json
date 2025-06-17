@@ -34,8 +34,7 @@
         "^ahoy_email$",
         "^sentry-rails$",
         "^geocoder$",
-        "^capistrano-sidekiq$",
-        "^$hoge"
+        "^capistrano-sidekiq$"
       ],
       "enabled": false
     }
