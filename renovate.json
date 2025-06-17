@@ -14,8 +14,6 @@
       "managers": ["bundler"],
       "matchDepTypes": ["direct"],
       "matchUpdateTypes": ["patch"],
-      "prTitle": "【パッチ更新】{{{depName}}} を {{currentVersion}} → {{newVersion}} に更新",
-      "prBodyTemplate": "### 概要\n{{{depName}}} を {{currentVersion}} から {{newVersion}} に更新しました。\n\n### 変更履歴\n{{{changelog}}}\n\n### 比較\n[差分はこちら]({{{sourceUrl}}}/compare/v{{{currentVersion}}}...v{{{newVersion}}})",
       "enabled": true
     },
     {
