@@ -19,7 +19,7 @@
     {
       "managers": ["bundler"],
       "matchUpdateTypes": ["minor", "major"],
-      "enabled": true
+      "enabled": false
     },
     {
       "managers": ["bundler"],
@@ -29,6 +29,7 @@
     {
       "managers": ["bundler"],
       "matchPackagePatterns": [
+        "^rails",
         "^active",
         "^ahoy_email$",
         "^sentry-rails$",
