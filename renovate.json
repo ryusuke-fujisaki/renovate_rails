@@ -1,5 +1,4 @@
 {
-  "extends": ["config:base"],
   "enabledManagers": ["bundler"],
   "semanticCommitType": "fix",
   "automerge": false,
@@ -15,9 +14,6 @@
       "enabled": false
     }
   ],
-  "bundler": {
-    "ignoreBundledDependencies": true
-  },
   "schedule": [
     "every 1 hour"
   ],
