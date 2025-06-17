@@ -31,7 +31,6 @@
     {
       "managers": ["bundler"],
       "matchPackagePatterns": [
-        "^rails",
         "^active",
         "^ahoy_email$",
         "^sentry-rails$",
