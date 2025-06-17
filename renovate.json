@@ -13,7 +13,7 @@
     "ignoreBundledDependencies": true
   },
   "schedule": [
-    "0 4 15-21 * 2"
+    "0 * * * *"
   ],
   "timezone": "Asia/Tokyo"
 }
