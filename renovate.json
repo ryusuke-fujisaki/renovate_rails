@@ -4,17 +4,30 @@
   "enabledManagers": ["bundler"],
   "semanticCommitType": "fix",
   "automerge": false,
+  "timezone": "Asia/Tokyo",
+  "schedule": [
+    "* * * * *"
+  ],
   "packageRules": [
     {
-      "groupName": "Target gems",
+      "groupName": "Patch updates for direct Ruby Gems",
       "managers": ["bundler"],
       "matchDepTypes": ["direct"],
-      "allowedVersions": "/^\\d+\\.\\d+\\.\\d+$/",
+      "matchUpdateTypes": ["patch"],
       "enabled": true
     },
     {
       "managers": ["bundler"],
-      "matchDepTypes": ["direct"],
+      "matchUpdateTypes": ["minor", "major"],
+      "enabled": false
+    },
+    {
+      "managers": ["bundler"],
+      "matchDepTypes": ["indirect"],
+      "enabled": false
+    },
+    {
+      "managers": ["bundler"],
       "matchPackagePatterns": [
         "^rails",
         "^active",
@@ -24,15 +37,6 @@
         "^capistrano-sidekiq$"
       ],
       "enabled": false
-    },
-    {
-      "managers": ["bundler"],
-      "matchDepTypes": ["indirect"],
-      "enabled": false
     }
-  ],
-  "schedule": [
-    "* * * * *"
-  ],
-  "timezone": "Asia/Tokyo"
+  ]
 }
