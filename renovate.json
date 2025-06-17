@@ -15,7 +15,7 @@
     }
   ],
   "schedule": [
-    "every 1 hour"
+    "0 * * * *"
   ],
   "timezone": "Asia/Tokyo"
 }
