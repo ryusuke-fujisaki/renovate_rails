@@ -21,7 +21,7 @@
     {
       "managers": ["bundler"],
       "matchUpdateTypes": ["minor", "major"],
-      "enabled": false
+      "enabled": true
     },
     {
       "managers": ["bundler"],
