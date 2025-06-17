@@ -1,6 +1,19 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended"
-  ]
+  "extends": ["config:base"],
+  "enabledManagers": ["bundler"],
+  "semanticCommitType": "fix",
+  "automerge": false,
+  "packageRules": [
+    {
+      "matchManagers": ["bundler"],
+      "allowedVersions": "/^\\d+\\.\\d+\\.\\d+$/"
+    }
+  ],
+  "bundler": {
+    "ignoreBundledDependencies": true
+  },
+  "schedule": [
+    "0 4 15-21 * 2"
+  ],
+  "timezone": "Asia/Tokyo"
 }
