@@ -1,37 +1,40 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended"
-  ],
+  "extends": ["config:base"],
+  "baseBranches": ["main", "sub"],
+  "enabledManagers": ["bundler"],
+  "semanticCommitType": "fix",
+  "automerge": false,
   "timezone": "Asia/Tokyo",
-  "schedule": ["after 10pm and before 1am"],
+  "schedule": ["* 0-4 * * 0"],
   "packageRules": [
     {
-      "packageNames": ["node", "@types/node", "ruby", "cimg/ruby"],
-      "enabled": false
-    },
-    {
-      "matchUpdateTypes": ["major"],
-      "matchPackageNames": ["bootstrap", "@types/bootstrap","reactstrap", "@coreui/coreui"],
-      "enabled": false
-    },
-    {
+      "groupName": "Rubyパッチアップデート",
+      "managers": ["bundler"],
+      "matchDepTypes": ["direct"],
       "matchUpdateTypes": ["patch"],
-      "groupName": "Patch Ruby Gems and npm packages",
-      "automerge": false
+      "enabled": true
     },
     {
-      "matchUpdateTypes": ["minor"],
-      "groupName": "Minor Ruby Gems and npm packages",
-      "excludePackageNames": ["rails"],
-      "automerge": false
+      "managers": ["bundler"],
+      "matchUpdateTypes": ["minor", "major"],
+      "enabled": false
     },
     {
-      "matchManagers": ["bundler"],
-      "matchUpdateTypes": ["major"],
-      "matchDepTypes": ["test", "development,test"],
-      "groupName": "Major Test Ruby Gems",
-      "automerge": false
+      "managers": ["bundler"],
+      "matchDepTypes": ["indirect"],
+      "enabled": false
+    },
+    {
+      "managers": ["bundler"],
+      "matchPackagePatterns": [
+        "^rails",
+        "^active",
+        "^ahoy_email$",
+        "^sentry-rails$",
+        "^geocoder$",
+        "^capistrano-sidekiq$"
+      ],
+      "enabled": false
     }
   ]
 }
