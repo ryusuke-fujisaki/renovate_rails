@@ -1,5 +1,7 @@
 {
-  "extends": ["config:base"],
+  "extends": [
+    "config:recommended"
+  ],
   "baseBranches": ["main", "sub"],
   "enabledManagers": ["bundler"],
   "semanticCommitType": "fix",
