@@ -11,15 +11,13 @@
       "groupName": "Rubyパッチアップデート",
       "managers": ["bundler"],
       "matchDepTypes": ["direct"],
-      "matchUpdateTypes": ["patch"],
-      "enabled": true
+      "matchUpdateTypes": ["patch"]
     },
     {
       "groupName": "Rubyマイナーアップデート",
       "managers": ["bundler"],
       "matchDepTypes": ["direct"],
-      "matchUpdateTypes": ["minor"],
-      "enabled": true
+      "matchUpdateTypes": ["minor"]
     },
     {
       "managers": ["bundler"],
