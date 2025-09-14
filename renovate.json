@@ -26,11 +26,6 @@
     },
     {
       "managers": ["bundler"],
-      "matchDepTypes": ["indirect"],
-      "enabled": false
-    },
-    {
-      "managers": ["bundler"],
       "matchPackagePatterns": [
         "^rails",
         "^active",
