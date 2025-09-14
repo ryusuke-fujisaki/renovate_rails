@@ -3,19 +3,42 @@
   "baseBranches": ["main", "sub"],
   "enabledManagers": ["bundler"],
   "semanticCommitType": "fix",
-  "automerge": false,
   "timezone": "Asia/Tokyo",
   "schedule": ["after 10pm and before 1am"],
   "packageRules": [
     {
       "groupName": "Rubyパッチアップデート",
       "managers": ["bundler"],
+      "automerge": false,
       "matchUpdateTypes": ["patch"]
     },
     {
       "groupName": "Rubyマイナーアップデート",
       "managers": ["bundler"],
+      "automerge": false,
       "matchUpdateTypes": ["minor"]
+    },
+    {
+      "managers": ["bundler"],
+      "matchUpdateTypes": ["major"],
+      "enabled": false
+    },
+    {
+      "managers": ["bundler"],
+      "matchDepTypes": ["indirect"],
+      "enabled": false
+    },
+    {
+      "managers": ["bundler"],
+      "matchPackagePatterns": [
+        "^rails",
+        "^active",
+        "^ahoy_email$",
+        "^sentry-rails$",
+        "^geocoder$",
+        "^capistrano-sidekiq$"
+      ],
+      "enabled": false
     }
   ]
 }
