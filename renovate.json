@@ -15,7 +15,9 @@
       "enabled": true
     },
     {
+      "groupName": "Rubyマイナーアップデート",
       "managers": ["bundler"],
+      "matchDepTypes": ["direct"],
       "matchUpdateTypes": ["minor"],
       "enabled": true
     },
