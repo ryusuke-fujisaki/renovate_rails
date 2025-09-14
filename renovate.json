@@ -1,8 +1,40 @@
 {
   "extends": ["config:base"],
-  "baseBranches": ["main"],
-  "assignees": ["@ryusuke-fujisaki"],
+  "baseBranches": ["main", "sub"],
   "enabledManagers": ["bundler"],
-  "automerge": true,
-  "timezone": "Asia/Tokyo"
+  "semanticCommitType": "fix",
+  "automerge": false,
+  "timezone": "Asia/Tokyo",
+  "schedule": ["* 0-4 * * 0"],
+  "packageRules": [
+    {
+      "groupName": "Rubyパッチアップデート",
+      "managers": ["bundler"],
+      "matchDepTypes": ["direct"],
+      "matchUpdateTypes": ["patch"],
+      "enabled": true
+    },
+    {
+      "managers": ["bundler"],
+      "matchUpdateTypes": ["minor", "major"],
+      "enabled": false
+    },
+    {
+      "managers": ["bundler"],
+      "matchDepTypes": ["indirect"],
+      "enabled": false
+    },
+    {
+      "managers": ["bundler"],
+      "matchPackagePatterns": [
+        "^rails",
+        "^active",
+        "^ahoy_email$",
+        "^sentry-rails$",
+        "^geocoder$",
+        "^capistrano-sidekiq$"
+      ],
+      "enabled": false
+    }
+  ]
 }
