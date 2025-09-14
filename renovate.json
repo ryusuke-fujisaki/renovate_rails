@@ -1,7 +1,7 @@
 {
   "extends": ["config:base"],
   "baseBranches": ["main"],
-  "assignees": [""@ryusuke-fujisaki"],
+  "assignees": ["@ryusuke-fujisaki"],
   "enabledManagers": ["bundler"],
   "automerge": false,
   "timezone": "Asia/Tokyo",
