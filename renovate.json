@@ -3,6 +3,7 @@
   "baseBranches": ["main", "sub"],
   "enabledManagers": ["bundler"],
   "semanticCommitType": "fix",
+  "automerge": false,
   "timezone": "Asia/Tokyo",
   "schedule": ["* 0-4 * * 0"],
   "packageRules": [
@@ -11,12 +12,16 @@
       "managers": ["bundler"],
       "matchDepTypes": ["direct"],
       "matchUpdateTypes": ["patch"],
-      "automerge": false,
       "enabled": true
     },
     {
       "managers": ["bundler"],
-      "matchUpdateTypes": ["minor", "major"],
+      "matchUpdateTypes": ["minor"],
+      "enabled": true
+    },
+    {
+      "managers": ["bundler"],
+      "matchUpdateTypes": ["major"],
       "enabled": false
     },
     {
