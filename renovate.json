@@ -8,28 +8,6 @@
   "schedule": ["after 10pm and before 1am"],
   "packageRules": [
     {
-      "managers": ["bundler"],
-      "matchUpdateTypes": ["major"],
-      "enabled": false
-    },
-    {
-      "managers": ["bundler"],
-      "matchDepTypes": ["indirect"],
-      "enabled": false
-    },
-    {
-      "managers": ["bundler"],
-      "matchPackagePatterns": [
-        "^rails",
-        "^active",
-        "^ahoy_email$",
-        "^sentry-rails$",
-        "^geocoder$",
-        "^capistrano-sidekiq$"
-      ],
-      "enabled": false
-    },
-    {
       "groupName": "Rubyパッチアップデート",
       "managers": ["bundler"],
       "matchDepTypes": ["direct"],
