@@ -5,7 +5,7 @@
   "semanticCommitType": "fix",
   "automerge": false,
   "timezone": "Asia/Tokyo",
-  "schedule": ["* 6-12 * * *"],
+  "schedule": ["0 4 * * *"],
   "packageRules": [
     {
       "groupName": "Rubyパッチアップデート",
