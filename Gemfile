@@ -97,7 +97,7 @@ gem 'wkhtmltopdf-binary'
 gem 'zip_kit'
 # 最新の1.8.3を使うと、csvのgemがインストールされ不具合が起きるため1.8.2で固定する
 # https://github.com/alexreisner/geocoder/blob/master/CHANGELOG.md
-gem 'geocoder', '<= 1.8.2'
+gem 'geocoder', '<= 1.8.5'
 
 group :development, :test, :staging, :mufg_staging do
   gem 'better_errors'
