@@ -1,0 +1,40 @@
+{
+  "extends": ["config:base"],
+  "baseBranches": ["main", "sub"],
+  "enabledManagers": ["bundler"],
+  "semanticCommitType": "fix",
+  "automerge": false,
+  "timezone": "Asia/Tokyo",
+  "schedule": ["* 0-4 * * 0"],
+  "packageRules": [
+    {
+      "groupName": "Rubyパッチアップデート",
+      "managers": ["bundler"],
+      "matchDepTypes": ["direct"],
+      "matchUpdateTypes": ["patch"],
+      "enabled": true
+    },
+    {
+      "managers": ["bundler"],
+      "matchUpdateTypes": ["minor", "major"],
+      "enabled": false
+    },
+    {
+      "managers": ["bundler"],
+      "matchDepTypes": ["indirect"],
+      "enabled": false
+    },
+    {
+      "managers": ["bundler"],
+      "matchPackagePatterns": [
+        "^rails",
+        "^active",
+        "^ahoy_email$",
+        "^sentry-rails$",
+        "^geocoder$",
+        "^capistrano-sidekiq$"
+      ],
+      "enabled": false
+    }
+  ]
+}

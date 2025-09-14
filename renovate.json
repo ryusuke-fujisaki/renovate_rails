@@ -1,22 +1,60 @@
 {
   "extends": ["config:base"],
-  "baseBranches": ["main", "sub"],
+  "baseBranches": ["main"],
+  "assignees": [""@ryusuke-fujisaki"],
   "enabledManagers": ["bundler"],
-  "semanticCommitType": "fix",
   "automerge": false,
   "timezone": "Asia/Tokyo",
   "schedule": ["* 0-4 * * 0"],
   "packageRules": [
     {
-      "groupName": "Rubyパッチアップデート",
+      "groupName": "gem_update_type_patch",
       "managers": ["bundler"],
       "matchDepTypes": ["direct"],
       "matchUpdateTypes": ["patch"],
+      "excludePackageNames": ["carrierwave", "^devise"],
+      "enabled": true
+    },
+    {
+      "groupName": "gem_update_type_minor",
+      "managers": ["bundler"],
+      "matchDepTypes": ["direct"],
+      "matchUpdateTypes": ["minor"],
+      "excludePackageNames": ["carrierwave", "^devise"],
       "enabled": true
     },
     {
       "managers": ["bundler"],
-      "matchUpdateTypes": ["minor", "major"],
+      "matchDepTypes": ["direct"],
+      "matchPackagePatterns": ["carrierwave"],
+      "enabled": true
+    },
+    {
+      "managers": ["bundler"],
+      "matchDepTypes": ["direct"],
+      "matchPackagePatterns": ["^devise"],
+      "enabled": true
+    },
+    {
+      "groupName": "gem_dep_type_development_test",
+      "managers": ["bundler"],
+      "matchDepTypes": ["direct", "development,test", "development", "test"],
+      "matchUpdateTypes": ["major", "minor"],
+      "enabled": true
+    },
+    {
+      "packageNames": ["node", "@types/node", "ruby", "cimg/ruby"],
+      "enabled": false
+    },
+    {
+      "matchUpdateTypes": ["major"],
+      "matchPackageNames": ["bootstrap", "@types/bootstrap", "reactstrap", "@coreui/coreui"],
+      "enabled": false
+    },
+    {
+      "managers": ["bundler"],
+      "matchDepTypes": ["direct"],
+      "matchUpdateTypes": ["major"],
       "enabled": false
     },
     {
@@ -30,7 +68,6 @@
         "^rails",
         "^active",
         "^ahoy_email$",
-        "^sentry-rails$",
         "^geocoder$",
         "^capistrano-sidekiq$"
       ],
