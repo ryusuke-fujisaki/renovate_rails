@@ -322,7 +322,7 @@ GEM
       devise (~> 4.0)
       railties (~> 7.0)
       rotp (~> 6.0)
-    devise_invitable (2.0.11)
+    devise_invitable (2.0.10)
       actionmailer (>= 5.0)
       devise (>= 4.6)
     diff-lcs (1.6.2)
@@ -1038,7 +1038,7 @@ DEPENDENCIES
   devise
   devise-security
   devise-two-factor (~> 4.1.0)
-  devise_invitable
+  devise_invitable (= 2.0.10)
   discard
   ed25519 (>= 1.2, < 2.0)
   elbas
