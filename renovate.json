@@ -16,28 +16,6 @@
       "groupName": "Rubyマイナーアップデート",
       "managers": ["bundler"],
       "matchUpdateTypes": ["minor"]
-    },
-    {
-      "managers": ["bundler"],
-      "matchUpdateTypes": ["major"],
-      "enabled": false
-    },
-    {
-      "managers": ["bundler"],
-      "matchDepTypes": ["indirect"],
-      "enabled": false
-    },
-    {
-      "managers": ["bundler"],
-      "matchPackagePatterns": [
-        "^rails",
-        "^active",
-        "^ahoy_email$",
-        "^sentry-rails$",
-        "^geocoder$",
-        "^capistrano-sidekiq$"
-      ],
-      "enabled": false
     }
   ]
 }
