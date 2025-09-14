@@ -3,7 +3,6 @@
   "baseBranches": ["main"],
   "assignees": ["@ryusuke-fujisaki"],
   "enabledManagers": ["bundler"],
-  "automerge": false,
-  "timezone": "Asia/Tokyo",
-  "schedule": ["* 0-4 * * 0"]
+  "automerge": true,
+  "timezone": "Asia/Tokyo"
 }
