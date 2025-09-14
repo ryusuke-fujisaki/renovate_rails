@@ -1038,7 +1038,7 @@ DEPENDENCIES
   devise
   devise-security
   devise-two-factor (~> 4.1.0)
-  devise_invitable (= 2.0.10)
+  devise_invitable
   discard
   ed25519 (>= 1.2, < 2.0)
   elbas
