@@ -8,18 +8,6 @@
   "schedule": ["after 10pm and before 1am"],
   "packageRules": [
     {
-      "groupName": "Rubyパッチアップデート",
-      "managers": ["bundler"],
-      "matchDepTypes": ["direct"],
-      "matchUpdateTypes": ["patch"]
-    },
-    {
-      "groupName": "Rubyマイナーアップデート",
-      "managers": ["bundler"],
-      "matchDepTypes": ["direct"],
-      "matchUpdateTypes": ["minor"]
-    },
-    {
       "managers": ["bundler"],
       "matchUpdateTypes": ["major"],
       "enabled": false
@@ -40,6 +28,18 @@
         "^capistrano-sidekiq$"
       ],
       "enabled": false
+    },
+    {
+      "groupName": "Rubyパッチアップデート",
+      "managers": ["bundler"],
+      "matchDepTypes": ["direct"],
+      "matchUpdateTypes": ["patch"]
+    },
+    {
+      "groupName": "Rubyマイナーアップデート",
+      "managers": ["bundler"],
+      "matchDepTypes": ["direct"],
+      "matchUpdateTypes": ["minor"]
     }
   ]
 }
