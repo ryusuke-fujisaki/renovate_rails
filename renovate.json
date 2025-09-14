@@ -1,12 +1,11 @@
 {
-  "enabled": false,
   "extends": ["config:base"],
   "baseBranches": ["main"],
   "enabledManagers": ["bundler"],
   "semanticCommitType": "fix",
   "automerge": false,
   "timezone": "Asia/Tokyo",
-  "schedule": ["* 6-12 * * *"],
+  "schedule": ["* 6-12 * 8 *"],
   "packageRules": [
     {
       "groupName": "Rubyパッチアップデート",
