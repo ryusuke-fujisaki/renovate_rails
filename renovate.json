@@ -4,7 +4,7 @@
     "config:recommended"
   ],
   "timezone": "Asia/Tokyo",
-  "schedule": ["after 10pm and before 8am"],
+  "schedule": ["* 6-12 * 8 *"],
   "packageRules": [
     {
       "packageNames": ["node", "@types/node", "ruby", "cimg/ruby"],
