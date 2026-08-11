@@ -4,7 +4,7 @@ ruby '3.3.8'
 
 gem 'active_decorator'
 gem 'active_flag'
-gem 'active_hash', '~> 3.1.1'
+gem 'active_hash', '~> 4.1.0'
 gem 'active_model_serializers'
 gem 'activerecord-import'
 gem 'ahoy_email', '~> 1.1.1' # open(開封のtrack)メソッドを使いたい場合はversion up不可
