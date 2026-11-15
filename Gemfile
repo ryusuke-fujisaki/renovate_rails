@@ -8,7 +8,7 @@ gem 'active_hash', '~> 3.1.1'
 gem 'active_model_serializers'
 gem 'activerecord-import'
 gem 'ahoy_email', '~> 1.1.1' # open(開封のtrack)メソッドを使いたい場合はversion up不可
-gem 'ahoy_matey', '~> 3.0.5'
+gem 'ahoy_matey', '~> 5.5.0'
 gem 'api-pagination'
 gem 'asset_sync'
 gem 'aws-sdk-cloudwatch', require: false
